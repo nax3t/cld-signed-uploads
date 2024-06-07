@@ -1,25 +1,19 @@
 {
-  "name": "cld-signed-upload",
+  "name": "signed-uploads-with-cloudinary-upload-widget",
   "version": "1.0.0",
-  "description": "Demonstration of a signed upload from the browser, using a server to create the signature.",
+  "description": "A sample repo demonstrating how to implement signed uploads with cloudinary's upload widget and express js.",
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carlevison/cld-signed-upload"
-  },
-  "scripts": {
-    "start": "node signed-uploads/app.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/carlevison/cld-signed-upload/issues"
-  },
-  "homepage": "https://github.com/carlevison/cld-signed-upload#readme",
   "dependencies": {
     "cloudinary": "^1.21.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "http-errors": "~1.6.3"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const response = await fetch('/api/signuploadwidget');
-  const data = await response.json();
+  const response = await fetch('/api/signuploadwidget')
+  const data = await response.json()
 
   const options = {
     cloudName: data.cloudname,
@@ -8,19 +8,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     uploadSignatureTimestamp: data.timestamp,
     uploadSignature: data.signature,
     cropping: false,
-    folder: 'signed_upload_demo_uw'
+    folder: 'signed_upload_demo_uw',
   }
 
   const processResults = (error, result) => {
     if (!error && result && result.event === 'success') {
       console.log(result)
       
-      var str = JSON.stringify(result, null, 4);
-      document.getElementById("uwdata").innerHTML += str;
+      const str = JSON.stringify(result, null, 4)
+      document.getElementById("uwdata").innerHTML += str
+
+      const uploadPreview = document.getElementById("upload_preview")
+      uploadPreview.innerHTML = ""
+
+      const img = document.createElement("img")
+      img.src = result.info.secure_url
+      img.alt = "Preview of image uploaded to Cloudinary via the Upload Widget"
+      img.style.width = "300px"
+
+      uploadPreview.appendChild(img)
     }
   }
 
-  const myWidget = window.cloudinary.createUploadWidget(
+  const myWidget = cloudinary.createUploadWidget(
     options,
     processResults
   )
