@@ -16,10 +16,26 @@
     <b>Important:</b> Before you start, ensure you've configured your Cloudinary account details in
     <b>app.js</b>.
   </p>
-  <p>Click "Upload Files" to open the upload widget.</p>
-  <div class="mb-20">
-    <button id="upload_widget" class="submit">Upload Files</button>
-  </div>
+  <form action="/users/1/profile?_method=PUT" method="POST">
+    <p>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </p>
+
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </p>
+
+    <p>
+      <label for="upload_widget">Profile Picture:</label>
+      <input type="button" id="upload_widget" class="submit" value="Upload Files" name="upload_widget">
+      
+      <input type="text" id="profilePicture" name="profilePicture" hidden>
+    </p>
+
+    <button type="submit" class="submit">Update Profile</button>
+  </form>
   <div id="upload_preview"></div>
   <h3>Upload response:</h3>
   <pre class="data" id="uwdata"></pre>

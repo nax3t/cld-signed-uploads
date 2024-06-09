@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       img.style.width = "300px"
 
       uploadPreview.appendChild(img)
+
+      // add secure url to Edit Profile Form
+      document.getElementById("profilePicture").value = result.info.secure_url
     }
   }
 
