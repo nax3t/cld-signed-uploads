@@ -20,7 +20,7 @@ cloudinary.config({
 // Upload signing API (using this API should require authentication)
 app.get('/api/signuploadwidget', (req, res, next) => {
   // Timestamp and cloudinary utility function used to sign an Upload Widget upload.
-  const timestamp = Math.round((new Date).getTime() / 1000)
+  const timestamp = Date.now()
   const signature = cloudinary.utils.api_sign_request(
     {
       timestamp: timestamp,
