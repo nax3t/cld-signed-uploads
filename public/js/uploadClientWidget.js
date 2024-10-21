@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     apiKey: data.apikey,
     uploadSignatureTimestamp: data.timestamp,
     uploadSignature: data.signature,
-    cropping: false,
     folder: 'signed_upload_demo_uw',
   }
 
