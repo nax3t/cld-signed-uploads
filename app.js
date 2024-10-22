@@ -38,9 +38,6 @@ app.get('/api/signuploadwidget', (req, res, next) => {
   })
 })
 
-// static files
-app.use(express.static('public'))
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))
