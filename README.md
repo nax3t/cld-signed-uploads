@@ -41,7 +41,7 @@ The application will be available at `http://localhost:3000` (or the port specif
 1. When the DOM is loaded, it fetches the upload signature from the server. This signature is valid for 1 hour from time of creation.
 2. It configures the Cloudinary Upload Widget with the received signature and other options.
 3. The widget is initialized and attached to a button with the ID 'upload_widget'.
-4. On successful upload, it displays the uploaded image and the response data.
+4. On successful upload, it displays the uploaded image or video and the response data.
 
 ### Key Components
 1. Cloudinary Configuration: The server configures Cloudinary using a Cloudinary Cloud Name, API key, and API secret which are stored in environment variables for secure access.
@@ -50,13 +50,13 @@ The application will be available at `http://localhost:3000` (or the port specif
 
 3. Upload Widget: The client-side code initializes and manages the Cloudinary Upload Widget.
 
-4. Result Handling: After a successful upload, the client-side code displays the uploaded image and response data.
+4. Result Handling: After a successful upload, the client-side code displays the uploaded image or video and response data.
 
 ### How It's All Connected
 1. The server provides the necessary API for signature generation which facilitates secure uploads.
 2. The client-side JavaScript fetches the upload signature from the server.
 3. The Upload Widget uses this signature to securely upload files to Cloudinary.
-4. The uploaded image is then displayed on the page.
+4. The uploaded image or video is then displayed on the page.
 
 This setup ensures that uploads are secure and authenticated, preventing unauthorized access to your Cloudinary account.
 
